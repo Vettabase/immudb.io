@@ -30,6 +30,7 @@ You can use the `BOOLEAN` type to define an entity state such as whether a user 
 
 Check this [page](https://www.postgresql.org/docs/current/datatype-boolean.html) for detailed information on PostgreSQL `BOOLEAN` type.
 
+
 ## PostgreSQL binary  types    
 
 **BYTEA**: The `BYTEA` type is a bit different from the `BLOB` type provided by immudb. The functions and operators offered by `BYTEA` are almost the same as the `BLOB` type. The only difference is the input format. PostgreSQL uses the hex format. The output format of `BYTEA` type is hex by default. You can change the default value via the `bytea_output` parameter.  
@@ -44,21 +45,19 @@ Check this [page](https://www.postgresql.org/docs/current/datatype-binary.html) 
 
 **VARCHAR**: The `VARCHAR` type is used to store strings up to a specified length. You can define the length by placing it in round brackets. If the `VARCHAR` type is used without the length specifier, it accepts strings of any size.   
 
-
 **TEXT**: The `TEXT` type also stores strings of any length. Unlike the `VARCHAR` type, the `TEXT` type can store strings of any size by default. There is no need to define a length specifier.   
 
 NB: If the `VARCHAR` type is defined as `VARCHAR(30)` it cannot accept strings with more than 30 characters. 
  
 Check this [page](https://www.postgresql.org/docs/current/datatype-character.html) for detailed information on PostgreSQL character types.
 
-At the time of documenting this page, immudb does not fully support `TIMESTAMP` type. However you can make use of an `INTEGER` type  with a `TIMESTAMP` value.
+At the time of documenting this page, immudb does not fully support `TIMESTAMP` type. However you can make use of an `INTEGER` type  with a `TIMESTAMP` value. 
 
+Below is a summary table of immudb data types supported in PostgreSQL.
 
-
-
-
-
-
-
-
-  
+| immudb data types | Postgresql data types | 
+|:-----------|------------:|
+| INTEGER  | INTEGER/SMALLINT |
+| BOOLEAN  | BOOLEAN |    
+| BLOB     | BYTEA |    
+|  VARCHAR | VARCHAR/TEXT|
