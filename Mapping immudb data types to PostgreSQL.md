@@ -61,3 +61,4 @@ Below is a summary table of immudb data types supported in PostgreSQL.
 | BOOLEAN  | BOOLEAN |    
 | BLOB     | BYTEA |    
 |  VARCHAR | VARCHAR/TEXT|
+| TIMESTAMP| TIMESTAMP
