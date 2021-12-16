@@ -174,7 +174,7 @@ SELECT location as emp_loc FROM post_table;
 SELECT location FROM post_table as pt
 ```
 
-> Both immudb and PostgreSQL supports the AS keyword
+> Both immudb and PostgreSQL supports the `AS` keyword
 
 
 ## Aggregation  
